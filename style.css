@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.controls input {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.controls input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.controls button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Table Styles */
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+thead tr{
+    background-color: #f7f9fc;
+}
+
+th, td {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 2px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    color: #0056b3;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+td button {
+    padding: 8px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+margin-right: 0px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+td button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+td button.delete {
+    height: 45px;
+    padding: 8px;
+    background-color: #e74c3c;
+    color: white;
+}
+
+td button.restore {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Add Form Styles */
+#addForm {
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: fadeIn 0.5s;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.flex div {
+    flex: 1 calc(10% - 100px); /* Two columns */
+}
+
+form input {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.form-buttons button {
+    padding: 12px;
+    width: 43%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.form-buttons button[type="button"] {
+
+    background-color: #6c757d;
+}
+
+.form-buttons button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls input {
+        margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 0.9rem;
+        overflow-x: scroll;
+        display: block;
+    }
+
+    .flex > div {
+        flex: 1 1 100%; /* Single column for small screens */
+    }
+}

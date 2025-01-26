@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Parking Management System</h1>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search..." onkeyup="searchData()">
+            <button onclick="showAddForm()">Add New Person</button>
+            <button onclick="showAllData()">View All Data</button>
+            <button onclick="showDeletedData()">View Deleted Data</button>
+        </div>
+
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Park No</th>
+                    <th>Apart No</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>phone</th>
+                    <th>Email</th>
+                    <th>Car no</th>
+                    <th>Profile Picture</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="addForm">
+            <form id="newPersonForm">
+                <div class="flex">
+                    <div class="f-name">
+                        <label for="name">First Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="l-name">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div>
+                        <label for="parkingNo">Parking No:</label>
+                        <input type="text" id="parkingNo" name="parkingNo" required>
+                    </div>
+                    <div>
+                        <label for="apartmentNo">Apartment No:</label>
+                        <input type="text" id="apartmentNo" name="apartmentNo" required>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div>
+                        <label for="telephone">Telephone:</label>
+                        <input type="text" id="telephone" name="telephone" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div>
+                        <label for="carRegistration">Car Registration:</label>
+                        <input type="text" id="carRegistration" name="carRegistration" required>
+                    </div>
+                    <div>
+                        <label for="profilePicture">Profile Picture:</label>
+                        <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" onclick="hideAddForm()">Cancel</button>
+                    <button type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
